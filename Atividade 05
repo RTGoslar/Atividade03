@@ -1,0 +1,41 @@
+   /*Faça um programa, utilizando estrutura de condição, que receba um número real, digitado pelo usuário e mostre o menu para selecionar o tipo de cálculo que deve ser realizado
+            101- Raiz quadrada
+            102- Ametade
+            103- 10% do número
+            104- o dobro*/
+
+            Console.WriteLine("### Operação de um Número Real ### ");
+
+            Console.Write("\nInforme um número real: ");
+            int numero = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("\nEscolha a operação que vai ser realizada: \n101- Raiz quadrada\n102- A metade\n103 - 10% do número\n104- o dobro");
+            int operacao = int.Parse(Console.ReadLine());
+
+            int raiz = numero / 2;
+            int metade = numero / 2;
+            double por = numero * 0.10;
+            int dobro = numero + numero;
+
+            if (operacao == 101)
+            {
+                Console.Write($"\nA raiz quadrada de {numero} é {raiz}");
+            }
+            else if (operacao == 102)
+            {
+                Console.Write($"\nA Metade de {numero} é {metade}");
+            }
+            else if (operacao == 103)
+            {
+                Console.Write($"\n10% de {numero} é {por}");
+            }
+            else if (operacao == 104)
+            {
+                Console.Write($"\nO dobro de {numero} é {dobro}");
+            }
+            else
+            {
+                Console.Write("\nOperação Invalida");
+            }
+
+            Console.ReadKey();

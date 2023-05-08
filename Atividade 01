@@ -1,0 +1,18 @@
+//Faça um programa que leia dois números e mostre qual o maior dos dois
+
+            Console.Write("Informe o número A: ");
+            double n1 = double.Parse(Console.ReadLine());
+
+            Console.Write("Informe o número B: ");
+            double n2 = double.Parse(Console.ReadLine());
+
+            if (n1 > n2)
+            {
+                Console.Write($"O número A {n1} é maior que o B {n2}");
+            }
+            else
+            {
+                Console.Write($"O número B {n2} é maior que o A {n1}");
+            }
+
+            Console.ReadKey();

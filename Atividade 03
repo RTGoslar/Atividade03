@@ -1,0 +1,33 @@
+ /* Calcule a média aritimética das três notas de um aluno e mostre, além do valor da média um mensagem de "Aprovado", caso a média
+             seja igual ou superior a 7; a mensagem "Em prova final" caso a média seja menor que 7 e maior ou igual a 4; e "reprovado",caso
+            contrário.*/
+          Console.WriteLine("### Média de Alunos ### ");
+
+            Console.Write("\nNome do Aluno: ");
+            string nome = Console.ReadLine();
+
+            Console.Write("Nota 1: ");
+            double nt1 = double.Parse(Console.ReadLine());
+
+            Console.Write("Nota 2: ");
+            double nt2 = double.Parse(Console.ReadLine());
+
+            Console.Write("Nota 3: ");
+            double nt3 = double.Parse(Console.ReadLine());
+
+            double media = (nt1 + nt2 + nt3) / 3;
+
+            if (media >= 7)
+            {
+                Console.WriteLine($"\nAluno APROVADO com média: {media}");
+            }
+            else if (media < 7 && media >= 4)
+            {
+                Console.WriteLine($"\nAluno EM PROVA FINAL com média: {media}");
+            }
+            else
+            {
+                Console.WriteLine($"\nAluno REPROVADO com média: {media}");
+            }
+
+            Console.ReadKey();  

@@ -1,0 +1,36 @@
+/*Um hotel cobra R$60,00 a diária e mais uma taxa de serviços. A taxa de serviços é de:
+             * R$ 5,50 por diária, se número de diárias for maior que 15;
+             * R$ 6,00 por diária, se o número de diárias for igual a 15;
+             * R$ 8,00 por diária, se o número de diárias for menor que 15.
+             Construa um programa que mostre o nome e o total da conta de um cliente.
+            */
+            Console.WriteLine("### Sistema de Hospedagem ### ");
+
+            Console.Write("\nInforme seu nome: ");
+            string nome = Console.ReadLine();
+
+            Console.Write("\nInforme o total de diárias: ");
+            double dias = int.Parse(Console.ReadLine());
+
+            double diaria = dias * 60;
+
+            if (dias > 15)
+            {
+                double taxa = dias * 5.50;
+                double total = diaria + taxa;
+                Console.Write($"\nCliente: {nome}\nTotal das diárias {diaria:C}\nA taxa cobrada foi de {taxa:C}\n\nTotal {total:C}");
+            }
+            else if (diaria == 15)
+            {
+                double taxa = dias * 6.00;
+                double total = diaria + taxa;
+                Console.Write($"\nCliente: {nome}\nTotal das diárias {diaria:C}\nA taxa cobrada foi de {taxa:C}\n\nTotal {total:C}");
+            }
+            else if (diaria < 15)
+            {
+                double taxa = dias * 8.00;
+                double total = diaria + taxa;
+                Console.Write($"\nCliente: {nome}\nTotal das diárias {diaria:C}\nA taxa cobrada foi de {taxa:C}\n\nTotal {total:C}");
+            }
+
+            Console.ReadKey();

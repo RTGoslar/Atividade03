@@ -1,0 +1,51 @@
+  /* Faça um programa que receba o valor da venda, escolha a condição de pagamento no menu e mostre o total da venda final conforme condições a seguir:
+            venda a vista - desconto de 10%
+            venda a prazo 30dias - desconto de 5%
+            venda a prazo 60dias - mesmo preço
+            venda a prazo 90dias - acrécimo de 5%
+            venda com cartao de débito - desconto de 8%
+            venda com cartao de crédito - desconto de 7%
+            */
+
+            Console.Write("Informe o valor da venda: ");
+            double venda = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Infome o formato de pagamento:0, 1, 2, 3, 4 ou 5.\n0 - A Vista\n1 - A Prazo (30 dias)\n2 - A Prazo (60 dias)\n3 - A Prazo (90 dias)\n4 - Débito\n5 - Crédito");
+            int pagamento = int.Parse(Console.ReadLine());
+
+            double pA = venda - venda * 0.10;
+            double p3 = venda - venda * 0.05;
+            double p9 = venda + venda * 0.05;
+            double pd = venda - venda * 0.08;
+            double pc = venda - venda * 0.07;
+
+            if (pagamento == 0)
+            {
+                Console.WriteLine($"\nVenda {venda:C} forma de pagamento Avista 10% de desconto, Total: {pA:C}");
+            }
+            else if (pagamento == 1)
+            {
+                Console.WriteLine($"\nVenda {venda:C} forma de pagamento Prazo (30dias) 5% de desconto, Total: {p3:C}");
+            }
+            else if (pagamento == 2)
+            {
+                Console.WriteLine($"\nVenda {venda:C} forma de pagamento Prazo (60dias) mesmo valor, Total: {venda:C}");
+            }
+            else if (pagamento == 3)
+            {
+                Console.WriteLine($"\nVenda {venda:C} forma de pagamento Prazo (90dias) 5% de acréscimo, Total: {p9:C}");
+            }
+            else if (pagamento == 4)
+            {
+                Console.WriteLine($"\nVenda {venda:C} forma de pagamento Débito 8% de desconto, Total: {pd:C}");
+            }
+            else if (pagamento == 5)
+            {
+                Console.WriteLine($"\nVenda {venda:C} forma de pagamento Crédito 7% de desconto, Total: {pc:C}");
+            }
+            else
+            {
+                Console.WriteLine("\nFormato de Pagamento Invalido");
+            }
+
+            Console.ReadKey();

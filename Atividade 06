@@ -1,0 +1,43 @@
+ // crie um programa que peça o nome, a altura e o peso de duas pessoas e apressente o nome da mais pesada e o nome da mais alta.
+
+            Console.Write("Informe o nome da pessoa 1: ");
+            string p1 = Console.ReadLine();
+
+            Console.Write("Informe seu peso: ");
+            double peso1 = double.Parse(Console.ReadLine());
+
+            Console.Write("Infome a sua altura: ");
+            double altura1 = double.Parse(Console.ReadLine());
+
+            Console.WriteLine();
+
+            Console.Write("Informe o nome da pessoa 2: ");
+            string p2 = Console.ReadLine();
+
+            Console.Write("Informe seu peso: ");
+            double peso2 = double.Parse(Console.ReadLine());
+
+            Console.Write("Infome a sua altura: ");
+            double altura2 = double.Parse(Console.ReadLine());
+
+            if (altura1 > altura2)
+            {
+                Console.Write($"{p1} é a mais alta");
+            }
+            else
+            {
+                Console.Write($"{p2} é a mais alta");
+            }
+
+            Console.WriteLine();
+
+            if (peso1 > peso2)
+            {
+                Console.Write($"{p1} é a mais pesada");
+            }
+            else
+            {
+                Console.Write($"{p2} é a mais pesada");
+            }
+
+            Console.ReadKey();
